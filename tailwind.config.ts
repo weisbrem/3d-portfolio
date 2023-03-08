@@ -1,6 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+import resolveConfig from 'tailwindcss/resolveConfig';
+
+export default resolveConfig({
+  content: ['./src/**/*.{ts, tsx}'],
   mode: 'jit',
   theme: {
     extend: {
@@ -24,4 +25,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+});
